@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Dashboard from "./components/Dashboard";
 import OutpassManager from "./components/OutpassManager";
 import ComplaintsPortal from "./components/ComplaintsPortal";
@@ -14,6 +14,7 @@ import HolidayCalendar from "./components/HolidayCalendar";
 import EventGallery from "./components/EventGallery";
 import SuggestionBox from "./components/SuggestionBox";
 import ItemRequestBox from "./components/ItemRequestBox";
+import ThemeSelector from "./components/ThemeSelector";
 
 import {
     INITIAL_STUDENT,
@@ -30,6 +31,24 @@ function App() {
     const [loggedIn, setLoggedIn] = useState(false);
     const [userRole, setUserRole] = useState("student"); // "student" | "warden" | "service"
     const [page, setPage] = useState("dashboard");
+
+    // Theme state (srm, navy, slate, light)
+    const [theme, setTheme] = useState(() => localStorage.getItem("hostel_erp_theme") || "srm");
+
+    // Live Campus Clock
+    const [currentClock, setCurrentClock] = useState(() => new Date().toLocaleTimeString('en-IN', { hour12: false }) + " IST");
+
+    useEffect(() => {
+        document.documentElement.setAttribute("data-theme", theme);
+        localStorage.setItem("hostel_erp_theme", theme);
+    }, [theme]);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentClock(new Date().toLocaleTimeString('en-IN', { hour12: false }) + " IST");
+        }, 1000);
+        return () => clearInterval(timer);
+    }, []);
 
     // State data
     const [student] = useState(INITIAL_STUDENT);
@@ -84,6 +103,10 @@ function App() {
     if (!loggedIn) {
         return (
             <div className="login-screen-bg">
+                <div className="login-top-actions">
+                    <ThemeSelector currentTheme={theme} onSelectTheme={setTheme} />
+                </div>
+
                 <div className="login-container fade-in">
                     <div className="login-header">
                         <CollegeLogo size="large" showSubtitle={true} subtitle="Directorate of Student Residential Affairs" />
@@ -316,11 +339,14 @@ function App() {
                         <span className="top-bar-dept">
                             <strong>SRM INSTITUTE OF SCIENCE & TECHNOLOGY</strong> &bull; Directorate of Student Affairs &bull; AY 2026-27
                         </span>
+                        <span className="top-bar-helpline">📞 Security Hotline: Ext. 8021</span>
                     </div>
                     <div className="top-bar-right">
+                        <ThemeSelector currentTheme={theme} onSelectTheme={setTheme} />
+                        <span className="campus-clock-pill">🕒 {currentClock}</span>
                         <span className="campus-status-pill">
                             <span className="campus-status-dot"></span>
-                            Campus Network Active
+                            Live Campus
                         </span>
                         <span className="campus-curfew-tag">⏰ Curfew: 21:30 IST</span>
                     </div>

@@ -1,4 +1,4 @@
-:root {
+:root, [data-theme="navy"] {
   --bg-main: #0a0f1d;
   --bg-surface: #0f172a;
   --bg-card: #141f36;
@@ -45,6 +45,119 @@
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.25);
   --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.35);
   --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.55);
+}
+
+/* Theme 1: SRM Royal Crimson & Gold (Official University Identity) */
+[data-theme="srm"] {
+  --bg-main: #0e080b;
+  --bg-surface: #180f14;
+  --bg-card: #23141d;
+  --bg-card-hover: #2d1a25;
+  --bg-sidebar: #0c0608;
+  --bg-topbar: rgba(14, 8, 11, 0.95);
+
+  --border-color: rgba(229, 192, 88, 0.16);
+  --border-hover: rgba(229, 192, 88, 0.32);
+  --border-gold: rgba(212, 175, 55, 0.45);
+
+  --text-main: #fdfaf6;
+  --text-muted: #d4b8be;
+  --text-dim: #9c8087;
+  --text-gold: #f6cd62;
+
+  --accent-primary: #8b1528;
+  --accent-primary-hover: #a51b32;
+  --accent-primary-bg: rgba(139, 21, 40, 0.25);
+
+  --accent-gold: #d4af37;
+  --accent-gold-bg: rgba(212, 175, 55, 0.16);
+
+  --accent-emerald: #059669;
+  --accent-emerald-bg: rgba(5, 150, 105, 0.14);
+
+  --accent-amber: #d97706;
+  --accent-amber-bg: rgba(217, 119, 6, 0.14);
+
+  --accent-rose: #dc2626;
+  --accent-rose-bg: rgba(220, 38, 38, 0.14);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.65);
+}
+
+/* Theme 3: Modern Academic Slate & Cyan (Engineering Campus) */
+[data-theme="slate"] {
+  --bg-main: #0b111e;
+  --bg-surface: #111a2e;
+  --bg-card: #17233d;
+  --bg-card-hover: #1f2f52;
+  --bg-sidebar: #080c16;
+  --bg-topbar: rgba(11, 17, 30, 0.95);
+
+  --border-color: rgba(56, 189, 248, 0.16);
+  --border-hover: rgba(56, 189, 248, 0.32);
+  --border-gold: rgba(245, 158, 11, 0.35);
+
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  --text-gold: #38bdf8;
+
+  --accent-primary: #0284c7;
+  --accent-primary-hover: #0369a1;
+  --accent-primary-bg: rgba(2, 132, 199, 0.18);
+
+  --accent-gold: #38bdf8;
+  --accent-gold-bg: rgba(56, 189, 248, 0.14);
+
+  --accent-emerald: #10b981;
+  --accent-emerald-bg: rgba(16, 185, 129, 0.14);
+
+  --accent-amber: #f59e0b;
+  --accent-amber-bg: rgba(245, 158, 11, 0.14);
+
+  --accent-rose: #ef4444;
+  --accent-rose-bg: rgba(239, 68, 68, 0.14);
+}
+
+/* Theme 4: Executive Campus Light Portal (Realistic Official University ERP) */
+[data-theme="light"] {
+  --bg-main: #f3f5f9;
+  --bg-surface: #e2e8f0;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8fafc;
+  --bg-sidebar: #0f172a;
+  --bg-topbar: rgba(255, 255, 255, 0.96);
+
+  --border-color: #cbd5e1;
+  --border-hover: #94a3b8;
+  --border-gold: #b45309;
+
+  --text-main: #0f172a;
+  --text-muted: #334155;
+  --text-dim: #64748b;
+  --text-gold: #b45309;
+
+  --accent-primary: #1e3a8a;
+  --accent-primary-hover: #1e40af;
+  --accent-primary-bg: rgba(30, 58, 138, 0.08);
+
+  --accent-gold: #b45309;
+  --accent-gold-bg: rgba(180, 83, 9, 0.1);
+
+  --accent-emerald: #047857;
+  --accent-emerald-bg: rgba(4, 120, 87, 0.1);
+
+  --accent-amber: #b45309;
+  --accent-amber-bg: rgba(180, 83, 9, 0.1);
+
+  --accent-rose: #be123c;
+  --accent-rose-bg: rgba(190, 18, 60, 0.1);
+
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.09);
+  --shadow-lg: 0 10px 25px rgba(15, 23, 42, 0.12);
 }
 
 * {

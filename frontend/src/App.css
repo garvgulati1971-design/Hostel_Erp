@@ -223,7 +223,8 @@
 .top-bar-left {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
 .top-bar-dept {
@@ -233,14 +234,35 @@
 }
 
 .top-bar-dept strong {
-    color: var(--text-primary);
+    color: var(--text-main);
     font-weight: 700;
+}
+
+.top-bar-helpline {
+    font-size: 0.74rem;
+    color: var(--text-dim);
+    background: rgba(255, 255, 255, 0.04);
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
 }
 
 .top-bar-right {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.campus-clock-pill {
+    font-size: 0.76rem;
+    font-family: monospace;
+    font-weight: 600;
+    color: var(--text-gold);
+    background: rgba(212, 175, 55, 0.08);
+    border: 1px solid var(--border-gold);
+    padding: 4px 10px;
+    border-radius: 9999px;
 }
 
 .campus-status-pill {
@@ -266,15 +288,15 @@
 
 .campus-curfew-tag {
     font-size: 0.78rem;
-    color: var(--text-secondary);
+    color: var(--text-muted);
     background: rgba(255, 255, 255, 0.04);
     padding: 4px 10px;
     border-radius: 6px;
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-color);
 }
 
 .page-content-wrapper {
-    padding: 28px 36px 40px;
+    padding: 24px 32px 40px;
     flex: 1;
 }
 
@@ -282,10 +304,19 @@
 .login-screen-bg {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle at top, #1e293b 0%, #0b0f19 100%);
+    background: var(--bg-main);
     padding: 20px;
+    position: relative;
+}
+
+.login-top-actions {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    z-index: 10;
 }
 
 .login-container {
