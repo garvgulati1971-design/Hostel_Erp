@@ -1,0 +1,131 @@
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const htmlContent = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SRM Hostel ERP - Complete Project & Technical Guide</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #1e293b; padding: 40px; max-width: 900px; margin: 0 auto; }
+        h1 { color: #1e3a8a; border-bottom: 3px solid #3b82f6; padding-bottom: 10px; }
+        h2 { color: #1e40af; margin-top: 30px; border-bottom: 1px solid #cbd5e1; padding-bottom: 5px; }
+        h3 { color: #2563eb; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #cbd5e1; padding: 10px 14px; text-align: left; }
+        th { background-color: #f1f5f9; color: #0f172a; }
+        pre { background: #0f172a; color: #f8fafc; padding: 16px; border-radius: 8px; overflow-x: auto; font-family: Consolas, monospace; }
+        code { background: #e2e8f0; padding: 2px 6px; border-radius: 4px; font-family: Consolas, monospace; }
+        .badge { background: #dbeafe; color: #1e40af; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 0.85em; }
+        .footer { margin-top: 50px; text-align: center; color: #64748b; font-size: 0.9em; border-top: 1px solid #e2e8f0; padding-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>🏛️ SRM Hostel ERP & AI Engine</h1>
+    <p><strong>Complete Project Roadmap, Scalable Data Stack & Code Presentation Guide</strong></p>
+    <p><em>Tailored for B.Tech 3rd Year Computer Science Project Submission</em></p>
+
+    <h2>1. 📌 Technology Stack & Java Mapping Roadmap</h2>
+    <table>
+        <tr>
+            <th>Full-Stack Layer</th>
+            <th>Technology Used</th>
+            <th>Java Equivalent Concept</th>
+            <th>Core Purpose & Advantage</th>
+        </tr>
+        <tr>
+            <td><strong>Frontend</strong></td>
+            <td>React 19 + Vite + CSS3</td>
+            <td>JavaFX / JSP Components</td>
+            <td>Fast component rendering with instant state reactivity.</td>
+        </tr>
+        <tr>
+            <td><strong>Backend REST API</strong></td>
+            <td>Node.js + Express.js</td>
+            <td>Spring Boot (@RestController)</td>
+            <td>Event-driven REST server providing endpoint APIs on port 5000.</td>
+        </tr>
+        <tr>
+            <td><strong>Database Engine</strong></td>
+            <td>SQLite (better-sqlite3)</td>
+            <td>H2 / PostgreSQL + JDBC</td>
+            <td>High-performance relational database using Write-Ahead Logging (WAL).</td>
+        </tr>
+        <tr>
+            <td><strong>Scalability Indexing</strong></td>
+            <td>B-Tree SQL Indexes</td>
+            <td>HashMap / Indexed Entity</td>
+            <td>Optimizes database queries from O(N) linear scan to O(log N) fast lookups.</td>
+        </tr>
+        <tr>
+            <td><strong>AI Assistant Engine</strong></td>
+            <td>Embedded NLP Rule Engine</td>
+            <td>Spring AI / Rule Engine</td>
+            <td>Processes student queries for outpasses, fees, attendance & menu.</td>
+        </tr>
+        <tr>
+            <td><strong>SMS Gateway Service</strong></td>
+            <td>Simulated SMS Gateway</td>
+            <td>JMS / Twilio REST API</td>
+            <td>Sends SMS notifications to service staff & parents upon ticket updates.</td>
+        </tr>
+    </table>
+
+    <h2>2. 👥 The Three Role Portals</h2>
+    <h3>1. 👤 Student Portal</h3>
+    <ul>
+        <li><strong>Dashboard:</strong> Real-time attendance rate (94.2%), fee balance, active outpasses, and mess menu.</li>
+        <li><strong>Gate Outpass Manager:</strong> Apply for day/night outpasses with AI risk scoring and QR gate pass generation.</li>
+        <li><strong>Maintenance Requests:</strong> Submit tickets for plumbing, electrical, WiFi, or housekeeping.</li>
+        <li><strong>Fees & Receipts:</strong> Detailed fee breakdown with online payment simulation and printable receipts.</li>
+        <li><strong>AI Helper Chatbot:</strong> Conversational NLP assistant for hostel queries.</li>
+    </ul>
+
+    <h3>2. 👨‍💼 Warden & Administration Portal</h3>
+    <ul>
+        <li><strong>Scalable Student Database Directory:</strong> Search and paginate 50+ student records with filter controls.</li>
+        <li><strong>Disciplinary Warnings System:</strong> Issue official written warnings to students (Curfew Violation, Noise Complaint, Mess Misconduct) with parent SMS notification.</li>
+        <li><strong>Outpass Approvals:</strong> Review outpasses flagged with AI risk levels before final decision.</li>
+        <li><strong>Emergency Broadcasts:</strong> Dispatch instant alerts across all student dashboards.</li>
+    </ul>
+
+    <h3>3. 🛠️ Service Staff & Maintenance Portal</h3>
+    <ul>
+        <li><strong>Technician Task Queue:</strong> View tickets filtered by discipline (Plumbing, Electrical, HVAC, WiFi).</li>
+        <li><strong>Status Updater:</strong> Update ticket state (Pending -> In Progress -> Resolved) with repair notes.</li>
+        <li><strong>Simulated SMS Gateway:</strong> Real-time SMS logs and smartphone mockup modal demonstrating live SMS delivery to technicians.</li>
+    </ul>
+
+    <h2>3. 🔍 Key Code Lines Explained</h2>
+    <h3>A. Database Indexing & Scalability (backend/db.js)</h3>
+    <pre><code>// WAL Mode enables concurrent reads while writing
+db.pragma('journal_mode = WAL');
+
+// B-Tree SQL Index for fast roll number queries
+CREATE INDEX IF NOT EXISTS idx_students_roll ON students(roll_no);</code></pre>
+    <p><em>Java Explanation:</em> WAL prevents database locking, while B-Tree indexing makes finding a roll number fast even across 100,000 records.</p>
+
+    <h3>B. Paginated Database API (backend/server.js)</h3>
+    <pre><code>app.get('/api/students', (req, res) => {
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 10;
+    const offset = (page - 1) * limit;
+
+    const students = db.prepare('SELECT * FROM students WHERE name LIKE ? LIMIT ? OFFSET ?')
+                      .all(search, limit, offset);
+    res.json({ success: true, page, data: students });
+});</code></pre>
+    <p><em>Java Explanation:</em> Like Spring Data <code>Pageable</code>, LIMIT and OFFSET prevent memory overload by fetching only 10 rows per page.</p>
+
+    <div class="footer">
+        <p>SRM Hostel ERP Project Documentation • Generated for Academic Presentation & Viva Review</p>
+    </div>
+</body>
+</html>`;
+
+fs.writeFileSync(path.join(__dirname, 'Hostel_ERP_Project_Guide.html'), htmlContent);
+console.log('✅ Generated HTML Project Guide at docs/Hostel_ERP_Project_Guide.html');

@@ -1,0 +1,309 @@
+.holidays-page {
+    padding: 24px 32px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.holidays-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(20, 31, 54, 0.95));
+    border: 1px solid var(--border-color);
+    padding: 24px 28px;
+    border-radius: var(--radius-lg);
+    margin-bottom: 24px;
+    box-shadow: var(--shadow-sm);
+}
+
+.academic-term-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.academic-term-badge span {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--accent-gold);
+}
+
+.holidays-header h1 {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.holidays-header p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.holidays-header-actions {
+    display: flex;
+    gap: 12px;
+}
+
+/* Stats Row */
+.holiday-stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.holiday-stat-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.holiday-stat-card.highlight {
+    border-color: rgba(16, 185, 129, 0.35);
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), var(--bg-card));
+}
+
+.stat-emoji {
+    font-size: 1.8rem;
+}
+
+.holiday-stat-card small {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+.holiday-stat-card h3 {
+    font-size: 1.15rem;
+    color: #ffffff;
+    margin-top: 2px;
+}
+
+/* Controls */
+.holiday-controls-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 2px 14px;
+    width: 320px;
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding-left: 8px;
+}
+
+.filter-chips {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.chip-btn {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.chip-btn:hover {
+    color: #ffffff;
+    border-color: var(--border-hover);
+}
+
+.chip-btn.active {
+    background: var(--accent-primary);
+    color: #ffffff;
+    border-color: var(--accent-primary);
+}
+
+/* Table Container */
+.holidays-table-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    overflow-x: auto;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow-sm);
+}
+
+.holidays-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.holidays-table th {
+    background: rgba(8, 13, 26, 0.7);
+    padding: 16px 20px;
+    color: var(--text-dim);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.holidays-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-main);
+}
+
+.holidays-table tbody tr:hover {
+    background: var(--bg-card-hover);
+}
+
+.holidays-table tr.past-row {
+    opacity: 0.6;
+}
+
+.holidays-table tr.highlight-row {
+    background: rgba(16, 185, 129, 0.04);
+}
+
+.date-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.date-main {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.day-name {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+}
+
+.holiday-title-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: #10b981;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    animation: pulseDot 1.8s infinite;
+}
+
+@keyframes pulseDot {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.mess-status-cell, .outpass-status-cell {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.countdown-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.countdown-badge.past {
+    background: rgba(100, 116, 139, 0.15);
+    color: #94a3b8;
+}
+
+.countdown-badge.today {
+    background: rgba(220, 38, 38, 0.2);
+    color: #f87171;
+    border: 1px solid rgba(220, 38, 38, 0.4);
+}
+
+.countdown-badge.soon {
+    background: rgba(16, 185, 129, 0.2);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.countdown-badge.upcoming {
+    background: rgba(59, 130, 246, 0.2);
+    color: #60a5fa;
+}
+
+.countdown-badge.future {
+    background: rgba(99, 102, 241, 0.15);
+    color: #a5b4fc;
+}
+
+/* Disclaimer Box */
+.holiday-disclaimer-box {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent-gold);
+    padding: 16px 20px;
+    border-radius: var(--radius-md);
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.disclaimer-icon {
+    font-size: 1.4rem;
+}
+
+.holiday-disclaimer-box strong {
+    color: #ffffff;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.holiday-disclaimer-box p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .holidays-page {
+        padding: 16px;
+    }
+    .holidays-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .search-box {
+        width: 100%;
+    }
+}

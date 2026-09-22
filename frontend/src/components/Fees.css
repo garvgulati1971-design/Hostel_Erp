@@ -1,0 +1,109 @@
+.fees-page {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.fee-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.f-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.f-card.success {
+    border-color: rgba(16, 185, 129, 0.3);
+}
+
+.f-card.warning {
+    border-color: rgba(245, 158, 11, 0.3);
+}
+
+.f-icon {
+    font-size: 2rem;
+    background: #0f172a;
+    width: 54px;
+    height: 54px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+}
+
+.f-card small {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+}
+
+.f-card h2 {
+    font-size: 1.4rem;
+    margin: 2px 0;
+}
+
+.f-card p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Fee Table */
+.fee-table-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+}
+
+.table-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.table-header-row h2 {
+    font-size: 1.25rem;
+}
+
+.fee-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.fee-table th {
+    text-align: left;
+    padding: 12px 14px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    background: #0f172a;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.fee-table td {
+    padding: 16px 14px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-muted);
+}
+
+.fee-table tfoot td {
+    border-top: 2px solid var(--border-color);
+    padding: 16px 14px;
+    font-size: 1rem;
+    background: #0f172a;
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+}

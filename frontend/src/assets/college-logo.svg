@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F9E27D" />
+      <stop offset="40%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#996515" />
+    </linearGradient>
+    
+    <linearGradient id="shieldNavy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F2B5C" />
+      <stop offset="60%" stop-color="#08183A" />
+      <stop offset="100%" stop-color="#040D20" />
+    </linearGradient>
+
+    <radialGradient id="sunburst" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(212,175,55,0.25)" />
+      <stop offset="100%" stop-color="rgba(15,43,92,0)" />
+    </radialGradient>
+
+    <!-- Path for circular text -->
+    <path id="textCircleTop" d="M 75,250 A 175,175 0 1,1 425,250" fill="none" />
+    <path id="textCircleBottom" d="M 420,250 A 170,170 0 0,1 80,250" fill="none" />
+  </defs>
+
+  <!-- Outer Ring with Beads -->
+  <circle cx="250" cy="250" r="240" fill="#0A1931" stroke="url(#goldGradient)" stroke-width="6" />
+  <circle cx="250" cy="250" r="226" fill="#0F2B5C" stroke="#D4AF37" stroke-width="2" stroke-dasharray="4,6" />
+  
+  <!-- Outer Gold Band -->
+  <circle cx="250" cy="250" r="218" fill="#07162C" stroke="url(#goldGradient)" stroke-width="3" />
+  <circle cx="250" cy="250" r="156" fill="url(#shieldNavy)" stroke="url(#goldGradient)" stroke-width="4" />
+  
+  <!-- Subtle Radial Glow Behind Shield -->
+  <circle cx="250" cy="250" r="154" fill="url(#sunburst)" />
+
+  <!-- Circular Institutional Typography -->
+  <text font-family="'Plus Jakarta Sans', 'Cinzel', 'Times New Roman', serif" font-weight="800" font-size="20.5" fill="url(#goldGradient)" letter-spacing="4.5">
+    <textPath href="#textCircleTop" startOffset="50%" text-anchor="middle">
+      SRM INSTITUTE OF SCIENCE &amp; TECH
+    </textPath>
+  </text>
+  
+  <text font-family="'Plus Jakarta Sans', 'Cinzel', 'Times New Roman', serif" font-weight="700" font-size="16" fill="#E2E8F0" letter-spacing="5">
+    <textPath href="#textCircleBottom" startOffset="50%" text-anchor="middle">
+      ★ LEARN • LEAP • LEAD ★
+    </textPath>
+  </text>
+
+  <!-- Heraldic Shield in Center -->
+  <g transform="translate(150, 140)">
+    <!-- Shield Outline & Fill -->
+    <path d="M 100,0 
+             C 170,0 200,30 200,80 
+             C 200,165 110,205 100,215 
+             C 90,205 0,165 0,80 
+             C 0,30 30,0 100,0 Z" 
+          fill="url(#shieldNavy)" 
+          stroke="url(#goldGradient)" 
+          stroke-width="5" />
+    
+    <!-- Shield Division Line & Chevron -->
+    <path d="M 10,75 L 100,115 L 190,75" fill="none" stroke="#D4AF37" stroke-width="2.5" opacity="0.6"/>
+    <path d="M 100,0 L 100,210" fill="none" stroke="#D4AF37" stroke-width="2" opacity="0.3"/>
+
+    <!-- Torch of Wisdom with Radiant Flame -->
+    <g transform="translate(100, 52)">
+      <!-- Flame outer -->
+      <path d="M 0,-32 C 14,-18 16,-6 8,6 C 18,-4 10,-24 0,-32 Z" fill="#F59E0B" />
+      <path d="M 0,-32 C -14,-18 -16,-6 -8,6 C -18,-4 -10,-24 0,-32 Z" fill="#EF4444" />
+      <path d="M 0,-24 C 6,-14 6,-4 0,4 C -6,-4 -6,-14 0,-24 Z" fill="#FDE047" />
+      <!-- Torch handle -->
+      <polygon points="-8,8 8,8 5,28 -5,28" fill="url(#goldGradient)" stroke="#78350F" stroke-width="1" />
+      <rect x="-10" y="5" width="20" height="4" rx="2" fill="#D4AF37" />
+      <polygon points="-3,28 3,28 0,40" fill="#D4AF37" />
+    </g>
+
+    <!-- Open Book of Knowledge -->
+    <g transform="translate(100, 155)">
+      <!-- Book Pages -->
+      <path d="M 0,0 C -18,-10 -45,-8 -60,4 L -60,-22 C -45,-32 -18,-30 0,-20 C 18,-30 45,-32 60,-22 L 60,4 C 45,-8 18,-10 0,0 Z" 
+            fill="#FFFFFF" 
+            stroke="#D4AF37" 
+            stroke-width="2" />
+      <path d="M 0,0 L 0,-20" stroke="#78350F" stroke-width="2.5" />
+      <!-- Book Lines -->
+      <line x1="-50" y1="-14" x2="-12" y2="-14" stroke="#94A3B8" stroke-width="1.8" />
+      <line x1="-50" y1="-8" x2="-15" y2="-8" stroke="#94A3B8" stroke-width="1.8" />
+      <line x1="-50" y1="-2" x2="-20" y2="-2" stroke="#94A3B8" stroke-width="1.8" />
+      <line x1="12" y1="-14" x2="50" y2="-14" stroke="#94A3B8" stroke-width="1.8" />
+      <line x1="15" y1="-8" x2="50" y2="-8" stroke="#94A3B8" stroke-width="1.8" />
+      <line x1="20" y1="-2" x2="50" y2="-2" stroke="#94A3B8" stroke-width="1.8" />
+    </g>
+  </g>
+
+  <!-- Laurel Wreath Leaves on Sides -->
+  <g stroke="url(#goldGradient)" fill="#D4AF37" opacity="0.9">
+    <!-- Left Laurel -->
+    <path d="M 120,290 C 105,270 95,240 92,205 C 90,190 98,185 105,198 C 112,212 118,245 125,260 Z" />
+    <path d="M 108,340 C 95,315 90,285 92,260 C 94,248 102,246 108,258 C 114,272 120,300 128,320 Z" />
+    <path d="M 128,375 C 110,350 102,325 104,295 C 110,315 125,345 138,360 Z" />
+    
+    <!-- Right Laurel -->
+    <path d="M 380,290 C 395,270 405,240 408,205 C 410,190 402,185 395,198 C 388,212 382,245 375,260 Z" />
+    <path d="M 392,340 C 405,315 410,285 408,260 C 406,248 398,246 392,258 C 386,272 380,300 372,320 Z" />
+    <path d="M 372,375 C 390,350 398,325 396,295 C 390,315 375,345 362,360 Z" />
+  </g>
+
+  <!-- Foundation Ribbon Banner at Bottom -->
+  <g transform="translate(140, 400)">
+    <path d="M 0,20 L 30,0 L 190,0 L 220,20 L 195,42 L 25,42 Z" fill="#0A1931" stroke="url(#goldGradient)" stroke-width="2.5" />
+    <text x="110" y="27" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="15" fill="url(#goldGradient)" text-anchor="middle" letter-spacing="2">
+      ESTD. 1985
+    </text>
+  </g>
+
+  <!-- Decorative 5-Point Stars -->
+  <g fill="url(#goldGradient)">
+    <polygon points="65,245 68,252 75,252 70,256 72,263 65,259 58,263 60,256 55,252 62,252" />
+    <polygon points="435,245 438,252 445,252 440,256 442,263 435,259 428,263 430,256 425,252 432,252" />
+  </g>
+</svg>
